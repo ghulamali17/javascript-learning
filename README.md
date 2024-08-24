@@ -410,3 +410,21 @@ Here’s why we use objects:
 4. **Encapsulation**: Objects allow you to hide the details of how things work and only expose what’s necessary. This makes your code cleaner and easier to use. For example, you don't need to know how the car's engine works to drive it—you just need the functions to start and stop the car.
 
 In short, objects make your code more structured, easier to manage, and more powerful.
+
+var person={
+    name="ali",
+    age=20,
+    email="example@gmail.com"
+    address="example street"
+}
+console.log(person.name)
+
+
+**New Keyword in JS**
+var person= new Object();
+person.name="ali";
+person.age=23;
+console.log(person.name)
+
+**Property getters and setters**
+
