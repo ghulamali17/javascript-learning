@@ -501,3 +501,24 @@ for(let i=0; i<=tm.length; i++){
       }
 
 **Querry Selector**
+ let em = document.querySelectorAll("p.intro");
+
+for (let i = 0; i < em.length; i++) {
+    em[i].innerHTML = "hahaha";
+}
+<!-- it will change all the p which have intro class -->
+**Traversing Elements**
+how we go to from one element to another is done by it we can go to like parent element by using it.
+<!-- to select parent of element -->
+   let em = document.getElementById("intro");
+ let prt=em.parentElement;
+ console.log(prt)
+<!-- to select first child -->
+  let em = document.getElementById("intro");
+ let prt=em.firstElementChild;
+ console.log(prt)
+ <!-- to select all childrens -->
+   let em = document.getElementById("intro");
+ let prt=em.children;
+ console.log(prt)
+ <!-- so select siblings -->

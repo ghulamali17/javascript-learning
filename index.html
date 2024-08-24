@@ -7,21 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>h1</h2>
-   <p>p1</p>
-   <h2>h2</h2>
-   <p>p2</p>
-   <h2>h3</h2>
-   <p>p3</p>
-   <div id="div1">
-    <h2>h2 ho main</h2>
-    <h2>h2</h2>
-    <h2>h2</h2>
-   </div>
-  
+   <ul >
+    <li>List1</li>
+    <li >List2 </li>
+    <li id="intro">List3</li>
+    <li>List4</li>
+   </ul>
+
+   <ul>
+    <li>List1</li>
+    <li>List2 </li>
+    <li>List3</li>
+    <li>List4</li>
+   </ul>
 
      <script>
-     
+   let em = document.getElementById("intro");
+ let prt=em.previousElementSibling;
+ console.log(prt)
+
      </script>
 </body>
 </html>
