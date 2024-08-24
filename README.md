@@ -443,5 +443,31 @@ var students1=new Students("ali", "brohi", 23, 10);
 students1.nationality="Pakistani";
 <!-- to add something extra -->
 console.log("students1")
-
 **Object ProtoTypes**
+
+**Nested Object**
+var user={
+id:101,
+email:"example@gmail.com",
+personalInf:{
+    name: "abc",
+    address:{
+        street: "example",
+        city: "Pakistan"
+    }
+}
+};
+console.log(user.personalInf)
+
+it will be used when we will learn jason format
+
+**Hoisting**
+the js first read the all code and if there is any function  it will put it first and then execute it
+like
+hello();
+function hello(){
+    console.log("Hello");
+}
+
+**Document Object Model (DOM)**
+it is type of API that help us to manipualte HTML. Through JS how we can bring changes into HTMl is done by DOM.
