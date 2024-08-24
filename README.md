@@ -522,3 +522,34 @@ how we go to from one element to another is done by it we can go to like parent 
  let prt=em.children;
  console.log(prt)
  <!-- so select siblings -->
+  let em = document.getElementById("intro");
+ let prt=em.previousElementSibling;
+ console.log(prt)
+
+ **Create and Append Element**
+ to dont remove the previous one but append something next to it
+ watch video about it dont understand it properly yet
+ **insert before**
+ watch video about it dont understand it properly yet
+
+ **Remove Child Element**
+
+ <ul id="ui">
+    <li>home</li>
+    <li>about</li>
+    <li>contact</li>
+ </ul>
+let prt=document.getElementById("ui");
+let elm=prt.firstElementChild;
+prt.removeChild(elm)
+   <!-- remove nxt sibling -->
+   let prt=document.getElementById("ui");
+let elm=prt.firstElementChild.nextElementSibling;
+prt.removeChild(elm)
+<!-- to remove a parent -->
+let prt=document.getElementById("ui");
+document.body.removeChild(prt)
+
+**Clone Element**
+let menu=document.getElementById("ui");
+**Replace Elements**

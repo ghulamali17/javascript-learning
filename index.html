@@ -7,25 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <ul >
-    <li>List1</li>
-    <li >List2 </li>
-    <li id="intro">List3</li>
-    <li>List4</li>
-   </ul>
-
-   <ul>
-    <li>List1</li>
-    <li>List2 </li>
-    <li>List3</li>
-    <li>List4</li>
-   </ul>
+ <ul id="ui">
+    <li>home</li>
+    <li>about</li>
+    <li>contact</li>
+ </ul>
+ 
 
      <script>
-   let em = document.getElementById("intro");
- let prt=em.previousElementSibling;
- console.log(prt)
+  
+let menu=document.getElementById("ui");
+let cloneElm=menu.cloneNode(true);
 
+console.log(cloneElm)
      </script>
 </body>
 </html>
