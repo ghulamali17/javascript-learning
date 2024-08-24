@@ -424,7 +424,24 @@ console.log(person.name)
 var person= new Object();
 person.name="ali";
 person.age=23;
-console.log(person.name)
+console.log(person.name)b
 
 **Property getters and setters**
 
+watch video about it dont understand it properly yet
+
+**Object Constructer**
+function Students(first,last,age,cls){
+    this.firstName=first;
+    this.lastName=last;
+    this.age=age;
+    this.class=cls;
+}
+<!-- to add something to constructer -->
+Students.prototype.nationality="pakistani";
+var students1=new Students("ali", "brohi", 23, 10);
+students1.nationality="Pakistani";
+<!-- to add something extra -->
+console.log("students1")
+
+**Object ProtoTypes**
