@@ -471,3 +471,33 @@ function hello(){
 
 **Document Object Model (DOM)**
 it is type of API that help us to manipualte HTML. Through JS how we can bring changes into HTMl is done by DOM.
+
+<!-- To change by class -->
+let tm=document.getElementsByClassName("cl");
+for(let i=0; i<=tm.length; i++){
+    tm[i].innerHTML="<P>hello</p>";
+}
+<!-- to change by id -->
+    let elm=  document.getElementById("first")
+      console.log(elm)
+      elm.innerHTML="<p>Hello</p>"
+
+<!-- **selectt element by tag name** -->
+ let tm=document.getElementsByTagName("p");
+       for(i=0; i<tm.length; i++){
+        tm[i].innerHTML=" hai bhai thek ho "
+       }
+       let ts=document.getElementsByTagName("h2");
+       for(i=0; i<=tm.length; i++){
+        ts[i].innerHTML="Hai Kaisy ho"
+       }
+
+<!-- to change elements in specific container/div -->
+ let div1=document.getElementById("div1")
+      let tm=div1.getElementsByTagName("h2")
+      for(i=0; i<=tm.length; i++){
+        tm[i].innerHTML="hai bhai"
+
+      }
+
+**Querry Selector**
