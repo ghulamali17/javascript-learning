@@ -11,15 +11,23 @@
     margin: 0;
     padding: 0;
 }
+body{
+    height: 2000px;
+}
+#box{
+    height: 120px;
+    width: 120px;
+    background-color: aqua;
+}
+
 </style>
 <body>
-   <button id="btn">Hello</button>
-     <script>
 
-let btn=document.getElementById("btn");
-btn.addEventListener('mouseover',function(){
-    alert("Yoo you mouse is over");
-});
+    <!-- js -->
+<script>
+window.addEventListener('scroll', function(){
+    console.log("scrolling")
+})
 </script>
 
 </body>

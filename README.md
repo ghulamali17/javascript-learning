@@ -701,4 +701,55 @@ btn.addEventListener('mouseover',function(){
 **REMOVE EVENTLISTNER**
 btn.removeEventListner("click",btnClicked)
 **PAGE LOAD EVENT**
-53:40
+we use it when something is loaded like if a image is fully loaded we can add some action 
+you can use it on a particuler element or window 
+<!-- for window -->
+window.addEventListner('DOMContentLoaded', function()){
+    alert("The window is loaded fully")
+};
+<!-- to load particuler element -->
+let em=getElementById("image1");
+em.addEventListner("load", function()){
+      alert("The Image is loaded now")
+};
+<!-- You can also use it inline  -->
+like onload="("load", function()){
+      alert("The Image is loaded now")
+};"
+
+**Mouse Events**
+<!-- on click inline -->
+   <div id="box" onclick="fun();"></div>
+     <script>
+function fun(){
+    alert("click")
+};
+</script>
+
+<!-- to activate event on right mouse click -->
+we use oncontextmenu
+<!-- on doule click -->
+we use ondblclick
+<!-- mouse down and up -->
+onmousedown
+onmouseup
+it will activated when we relaease mouse btn down or up
+<!-- on mouse over -->
+work like hover
+<!-- on mouse out -->
+when you take curser out from element
+
+**Key Down Element**
+<!-- to check which key is pressed -->
+   <div id="box"></div>
+        window.addEventListener("keydown", fun)
+function fun(ev)
+   <!-- we can use it a condition like if some key is clicked do this or that -->
+
+**Scroll Events**
+   <script>
+window.addEventListener('scroll', function(){
+    console.log("scrolling")
+})
+</script>
+1.12.49
