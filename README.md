@@ -586,3 +586,49 @@ let el=ull.hasAttribute("name");
 <button id="ui" name="uisi">Form 1</button>
 let btn=document.getElementById("ui");
 btn.style.cssText="background-color: red;"
+<!-- another way to add inline style -->
+    <button id="ui" name="uisi">Form 1</button>
+ 
+
+     <script>
+  
+let btn=document.getElementById("ui");
+btn.setAttribute('style','background-color: black; color: white; padding: 20px 30px; font-size:2rem; border-radius: 36px;');
+
+<!-- another way -->
+let btn=document.getElementById("ui");
+btn.style.color="red"
+
+**Get Computed CSS**
+to check already applied css to attribute
+lett css=getComputedStyle(btn.color);
+
+**Css Classes**
+<!-- to check classname -->
+    <div id="box" class="color dim">
+        <p>This is a dummy text</p>
+    </div>
+  
+let em=document.getElementById("box")
+console.log (em.className);
+<!-- to add new class -->
+    <div id="box" class="color">
+        <p>This is a dummy text</p>
+    </div>
+let em=document.getElementById("box")
+em.className +=" dim"
+<!-- one more way to check classes -->
+  <div id="box" class="color dim">
+        <p>This is a dummy text</p>
+    </div>
+let em=document.getElementById("box")
+// console.log(em.classList)
+for(let css of em.classList){
+    console.log(css)}
+    <!-- now to add some class using classlist -->
+     <div id="box" class="color dim">
+        <p>This is a dummy text</p>
+    </div>
+let em=document.getElementById("box")
+em.classList.add("dim");
+26:28
