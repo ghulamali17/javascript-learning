@@ -7,25 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    .color{
-        background-color: aqua;
-        color: blue;
-    }
-    .dim{
-        padding: 100px;
-        border: 1px solid red;
-    }
+*{
+    margin: 0;
+    padding: 0;
+}
 </style>
 <body>
-    <div id="box" class="color dim">
-        <p>This is a dummy text</p>
-    </div>
- 
-
+   <button id="btn">Hello</button>
      <script>
-  
-let em=document.getElementById("box")
-em.classList.add("dim");
+
+let btn=document.getElementById("btn");
+btn.addEventListener('mouseover',function(){
+    alert("Yoo you mouse is over");
+});
 </script>
 
 </body>

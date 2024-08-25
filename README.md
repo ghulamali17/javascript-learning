@@ -630,5 +630,75 @@ for(let css of em.classList){
         <p>This is a dummy text</p>
     </div>
 let em=document.getElementById("box")
-em.classList.add("dim");
+em.classList.add("uiui");
 26:28
+<!-- to remove some class -->
+em.classList.remove("uiui");
+<!-- to replace some class -->
+em.classList.replace("color", "bg");
+<!-- to check class is there or not -->
+em.classList.contains("color");
+<!-- it will check if class is not there it will add it and if there is class it will remove it -->
+em.classList.contains("hqhq");
+
+**width height of an element**
+<!-- to check with border -->
+ <div id="box" class="color dim">
+        <p>This is a dummy text</p>
+    </div>
+let em=document.getElementById("box");
+let width=em.offsetWidth;
+let height=em.offsetHeight;
+console.log(width)
+console.log(height)
+<!-- to check without border -->
+let width=em.clientWidth;
+let height=em.clientHeight;
+console.log(width)
+console.log(height)
+
+**DOM Events**
+Dom events are actions that occurs as a result of the user action or as result of state change of the elements of a DOM tree.
+it can be two types
+one is user when does some action
+and when our web page does like load
+
+<!-- onclick Inline -->
+ <button id="bten" onclick="btnClicked()">Hello</button>
+    
+function btnClicked(){
+    alert("Yoo btn Cliked")
+}
+<!-- using event listner -->
+   <button id="btn">Hello</button>
+function btnClicked(){
+    alert("Yoo btn Cliked")
+}
+let btn=document.getElementById("btn");
+btn.addEventListener('click',btnClicked)
+
+<!-- one more way using anonymous function if we wanna use it only one time -->
+   <button id="btn">Hello</button>
+function btnClicked(){
+    alert("Yoo btn Cliked")
+}
+let btn=document.getElementById("btn");
+btn.addEventListener('click',function(){
+    alert("Yoo you btn Cliked");
+});
+<!-- mouse over -->
+   <button id="btn">Hello</button>
+     <script>
+
+let btn=document.getElementById("btn");
+btn.addEventListener('mouseover',function(){
+    alert("Yoo you mouse is over");
+});
+</script>
+<!-- some goes for mouse out -->
+
+
+**REMOVE EVENTLISTNER**
+btn.removeEventListner("click",btnClicked)
+**PAGE LOAD EVENT**
+53:40
