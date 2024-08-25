@@ -753,3 +753,18 @@ window.addEventListener('scroll', function(){
 })
 </script>
 1.12.49
+<!-- to check whether scroll up or down -->
+<script>
+       
+        </script>
+<!-- to check scroll on particuler pixel --> 
+         <script>
+        window.addEventListener('scroll', function(){
+            if(window.pageYOffset>150){
+                document.body.style.background="red";
+            }
+        });
+
+        </script>
+
+**Input Events**1;22

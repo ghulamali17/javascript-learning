@@ -3,32 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascipt</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+    </style>
 </head>
-<style>
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    height: 2000px;
-}
-#box{
-    height: 120px;
-    width: 120px;
-    background-color: aqua;
-}
-
-</style>
 <body>
+    <script>
+        window.addEventListener('scroll', function(){
+            if(window.pageYOffset>150){
+                document.body.style.background="red";
+            }
+        });
 
-    <!-- js -->
-<script>
-window.addEventListener('scroll', function(){
-    console.log("scrolling")
-})
-</script>
-
+        </script>
 </body>
 </html>
