@@ -287,17 +287,17 @@ document.write(books);
 <!-- to check lenght -->
 let books=["book1","book2","book1","book3","book4","book5"];
 document.write(books.length);
-<!-- if we want to add something after last array item -->
+<!-- if we want to add something at end of array-->
 let books=["book1","book2","book1","book3","book4","book5"];
 books.push("book6")
 document.write(books);
-<!-- if we want to add something before first array item -->
+<!-- if we want to add  start of array-->
 let books=["book1 ","book2 ","book1 ","book3 ","book4 ","book5 "];
 books.unshift("book")
 document.write(books);
 <!-- to delete last item -->
 books.pop();
-<!-- to front item -->
+<!-- to  delete first element -->
 books.shift();
 <!-- to delete a item from middle -->
 let books=["book1 ","book2 ","book1 ","book3 ","book4 ","book5 "];
@@ -553,3 +553,36 @@ document.body.removeChild(prt)
 **Clone Element**
 let menu=document.getElementById("ui");
 **Replace Elements**
+ watch video about it dont understand it properly yet
+ **Insert adjacent HTML**
+ insertAdjacentHTML: A JavaScript method used to insert HTML content into the DOM relative to an existing element. You can insert the content in four positions:
+
+"beforebegin": Before the element itself.
+"afterbegin": Inside the element, before its first child.
+"beforeend": Inside the element, after its last child.
+"afterend": After the element itself.
+This method is efficient for adding new HTML without affecting the entire content of the element.
+<!-- myDiv.insertAdjacentHTML('beforeend', '<p>Inserted at the end inside the div.</p>'); -->
+
+**Change  Attribute**
+ let ull=document.getElementById("ui");
+ull.setAttribute("class", "uiui")   
+
+<!-- to check already attribute -->
+<button id="ui" name="uisi">Form 1</button> 
+let ull=document.getElementById("ui");
+let el=ull.getAttribute("name");
+document.write(el);
+<!-- to remove a attribute -->
+<button id="ui" name="uisi">Form 1</button> 
+let ull=document.getElementById("ui");
+let el=ull.removeAttribute("name");
+document.write(el);
+<!-- to check attribute available or not -->
+let el=ull.hasAttribute("name");
+
+
+**Inline Style**
+<button id="ui" name="uisi">Form 1</button>
+let btn=document.getElementById("ui");
+btn.style.cssText="background-color: red;"
