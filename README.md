@@ -767,4 +767,76 @@ window.addEventListener('scroll', function(){
 
         </script>
 
-**Input Events**1;22
+**Input Events**
+to check how to detect if user click on element
+    <form action="" >
+        <input type="text" id="tt">
+    </form>
+
+    <!-- js -->
+    <script>
+let em=document.getElementById("tt");
+em.addEventListener('focus', fun1);
+em.addEventListener('blur', fun2);
+function fun1(){
+    em.style.background="yellow"
+}
+function fun2(){
+    em.style.background="white"
+}
+        </script>
+<!-- to get value of any input -->
+<form action="" >
+        <input type="text" id="tt">
+    </form>
+    let em=document.getElementById("tt");
+em.addEventListener('change', function(){
+ console.log(this.value )
+});
+<!-- to get when something is typing we use input -->
+<form action="" >
+        <input type="text" id="tt">
+    </form>
+let em=document.getElementById("tt");
+em.addEventListener('input', function(){
+ console.log(this.value )
+});
+
+**Event Bubbling & Event Capturing**
+
+<!-- event bubbling -->
+in thisthe event starts at the most specific element and then goes upward to the least specific element.
+    <div id="myDiv">
+        <button id="btn"></button>
+    </div>
+
+    <!-- js -->
+    <script>
+       
+let d = document.getElementById("myDiv");
+let b = document.getElementById("btn");
+
+b.addEventListener('click', btnClicked);
+d.addEventListener('click', divClicked);
+document.body.addEventListener('click', bodyClicked);
+function btnClicked(){
+    console.log("button clicked....");
+}
+
+function divClicked(){
+    console.log("div clicked....");
+}
+
+function bodyClicked(){
+    console.log("body clicked....");
+}
+<!-- event capturing -->
+it is inverse of bubbling so in the first least specific then most specific.
+addEventListner(event, function,false)
+<!-- to select only selected element -->
+function btnClicked(event){
+    console.log("button clicked....");
+    event.stopPropagation();
+}
+
+**Prevent Default** 1:46
