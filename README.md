@@ -155,7 +155,14 @@ for(let key in person ){
     console.log(`${key} : ${person[key]}`)
 }
 
+<!-- for each -->
 
+for each is a higher order funntion or method. hof is the function which take other function as parametar
+or return it.
+let arr=[1,2,3,4,5,6]
+arr.forEach((val) =>{
+   document.write(val)
+})
 
 **Break Continue and Nested Lopp**
 <!-- break -->
