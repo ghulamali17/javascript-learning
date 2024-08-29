@@ -5,37 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            height: 2000px;
+      body{
+        display: flex;
+        justify-content: center;
+       
+      }
+        #box{
+            height: 300px;
+            width: 300px;
+           background-color: red;
         }
     </style>
 </head>
 <body>
-    <div id="myDiv">
-        <button id="btn"></button>
-    </div>
+<div id="box">
+<h1>hello</h1>
+</div>
 
-    <!-- js -->
-    <script>
-       
-let d = document.getElementById("myDiv");
-let b = document.getElementById("btn");
 
-b.addEventListener('click', btnClicked);
-d.addEventListener('click', divClicked);
-document.body.addEventListener('click', bodyClicked);
-function btnClicked(){
-    console.log("button clicked....");
-}
-
-function divClicked(){
-    console.log("div clicked....");
-}
-
-function bodyClicked(){
-    console.log("body clicked....");
-}
-
-        </script>
+<script src="app.js"></script>
 </body>
 </html>

@@ -138,6 +138,23 @@ for(let a=1; a<=10; a++){
 }
 first time it will read from a=1 then it check condition and then it will skip a++ and print the document text one time
 then it will go in reverse it will go to a++ it will print one time then check condition if true print more
+<!-- for of -->
+we can use it to get value of string and arrays 
+let str=["alibrohi","ali","alywe","brohi"]
+for( let vhh of str){
+    console.log(vhh)
+}
+<!-- for in -->
+it is use to get key values of object
+let person={
+    name: "ali",
+    age: 20,
+    email: "exam@gmail.com"
+}
+for(let key in person ){
+    console.log(`${key} : ${person[key]}`)
+}
+
 
 
 **Break Continue and Nested Lopp**
@@ -839,4 +856,54 @@ function btnClicked(event){
     event.stopPropagation();
 }
 
-**Prevent Default** 1:46
+**Prevent Default** 
+it is use to change default behaiour of DOM
+
+<a href="https://www.google.com" id="anchr">Click Me</a>
+
+    <script>
+let anc=document.getElementById("anchr");
+anc.addEventListener('click', function(e){
+    console.log("clicked");
+    e.preventDefault();
+})
+
+        </script>
+
+**Browser Object Model(BOM)**
+use to interact with browser
+<!-- window -->
+every function is the method of window object
+<!-- to check height  -->
+console.log(window.innerHeight);
+console.log(window.outerHeight);
+<!-- to open a POPUP -->
+ <button id="btn">Google</button>
+    <script>
+       
+let btn=document.getElementById("btn");
+let url="https://www.google.com"
+let features="height:=500, width=500"
+btn.addEventListener('click', function(){
+    window.open(url,'google',features);
+});
+
+        </script>
+**Time out and Time Interval**
+let sst=setTimeout(myFun,5000)
+function myFun(){
+    alert("Heloooooooooooooooooo")
+}
+<!-- to stop it -->
+clearTimeOut(sst);
+to can use it to sh999ow msg if user is login or not
+**Location object**
+console.log(location.href)
+console.log(location.pathname)
+console.log(location.protocol)
+
+**Navigator object**
+it can give you all the information about the browser
+**Screen Object**
+console.log(screen.width)
+console.log(screen.height)

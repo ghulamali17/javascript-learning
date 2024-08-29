@@ -1,12 +1,8 @@
-var user={
-id:101,
-email:"example@gmail.com",
-personalInf:{
-    name: "abc",
-    address:{
-        street: "example",
-        city: "Pakistan"
-    }
+let gameNo = 20;
+let userNo = prompt('Enter Your Number');
+
+while (userNo != gameNo) {
+    userNo = prompt('Wrong! Enter again:');
 }
-};
-console.log(user.personalInf)
+
+console.log('You won');
