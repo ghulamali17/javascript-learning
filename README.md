@@ -443,7 +443,26 @@ var person={
 }
 console.log(person.name)
 
+<!-- object with method -->
+let person1={
+    fName: "ali",
+    lName: 'brohi',
+    age: 24,
 
+    fullName: function(){
+        console.log(this.fName+ " " + this.lName);
+    }
+}
+console.log(person1.fullName());
+<!-- we can add value to it after any time -->
+let person1={
+   
+}
+person1.name='ali'
+person1.sayHii=function(){
+    alert('Hi')
+}
+person1.sayHii();
 **New Keyword in JS**
 var person= new Object();
 person.name="ali";
@@ -551,8 +570,14 @@ how we go to from one element to another is done by it we can go to like parent 
  console.log(prt)
 
  **Create and Append Element**
- to dont remove the previous one but append something next to it
- watch video about it dont understand it properly yet
+let newBtn=document.createElement("button");
+newBtn.innerText="click me"
+let div=document.querySelector('div')
+div.append(newBtn)
+
+<!-- it will ad at last -->
+div.prepend(newBtn)
+<!-- it will add at start -->
  **insert before**
  watch video about it dont understand it properly yet
 
@@ -589,6 +614,7 @@ This method is efficient for adding new HTML without affecting the entire conten
 <!-- myDiv.insertAdjacentHTML('beforeend', '<p>Inserted at the end inside the div.</p>'); -->
 
 **Change  Attribute**
+it is use to change attribute like class id name
  let ull=document.getElementById("ui");
 ull.setAttribute("class", "uiui")   
 
@@ -914,3 +940,76 @@ it can give you all the information about the browser
 **Screen Object**
 console.log(screen.width)
 console.log(screen.height)
+
+
+**Default Value**
+let userTheme = 1;
+let theme = userTheme ?? "dark mode";
+console.log(theme); // Output: "dark mode"
+
+**Array Search**
+let contacts = [
+   {id: 1, name: "Ali", address: "Malir"},
+   {id: 2, name: "Hisham", address: "Saddar"},
+   {id: 3, name: "Nabeel", address: "Model Town"}
+];
+let newArr=contacts.find(contact => contact.name==='Nabeel')
+console.log(newArr)
+
+
+**Advance  JavaScript**
+EcmaScript is a standard which js adapt. it is version of js 1997 first. es6 was released in june 2015.
+es6 was a major change. like arrow function.
+<!-- let and const -->
+the var become the property of window object where is let do not become
+***Array Destructuring***
+let array=['ali,20,karachi']
+let[name,age,city]=array;
+console.log(name)
+if add something extra and there is less values in array then it will give undefined and if write we create empty item in array then we can give it defalut value like
+let array=['ali,20,'','karachi']
+let[name,age,college='smiu',city]=array;
+***object Destructuring***
+let book={
+    name: 'advance js',
+    author: 'ali',
+    // readers: 10000,
+    origin: "Pakistan"
+}
+let{name:title,author=20000,readers,origin}=book;
+console.log(author)
+**Modules**
+we have to add this in html file then we can use it with import and export in d/f files.
+<script type="module" src="app.js"></script>
+import {name} from './modules/user.js'
+import {code} from './modules/user.js'
+code();
+<!-- we can import whole file like this but it will only work with those who have export keyword -->
+import * as usr from './modules/user.js'
+usr.code();
+
+***OPPS In JS**
+<!-- Inheritance -->
+Inheritance in OOP is when a new class (child) takes on the properties and behaviors of an existing class (parent). This allows for code reuse and easier management of similar objects.
+
+<!-- Four Piller of OPPS -->
+The four pillars of OOP (Object-Oriented Programming) are:
+
+1. **Encapsulation**: This means wrapping up all the details about something (like a toy or a game) inside a box/unit, so you can use it without knowing how it works inside.
+
+2. **Abstraction**: This is like using a TV remote. You press buttons to change channels without needing to understand the complex circuits inside the TV.
+
+3. **Inheritance**: Imagine a baby animal that inherits features from its parents, like fur color or the way it runs. In coding, new progr/ams can inherit features from old ones.
+
+4. **Polymorphism**: This is like how one word can have different meanings depending on where you use it. In coding, one action can do different things based on the situation.
+
+
+<!-- before es6 -->
+<!-- we were using construtor function as class -->
+function Person(fName,lName,a){
+    this.firstName=fName;
+    this.lastName=lName;
+    this.age=a;
+}
+let person1=new Person('ali','brohi',24)
+console.log(person1)
