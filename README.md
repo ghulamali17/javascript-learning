@@ -381,7 +381,6 @@ let user = {
 };
 console.log(user.personalInfo.address.street);
 
-yahan
 **Hoisting**
 Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. This means you can use functions and variables before declaring them.
 hello();
