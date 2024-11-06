@@ -1,38 +1,43 @@
-**JS TIPS AND TREICKS**
-<!-- Trick 1 -->
-it will give answer 10 because user answer is 0 if it is grater than zer0 then it
-will give that answer
-let userCount=0;
-count= userCount || 10;
-console.log(count);
+**JS Tips and Tricks**
+**Trick 1: Using Logical OR vs Nullish Coalescing (??)**
+When you use ||, it will return the second operand if the first is falsy (e.g., 0, null, undefined). But with ?? (nullish coalescing), it will return the second operand only if the first is null or undefined.
 
-<!-- if we reolve it we can write it in a way that it will give 10 even userCount=0; -->
+// With logical OR (||)
+let userCount = 0;
+let count = userCount || 10;
+console.log(count); // Outputs: 10
 
-let userCount=0;
-count= userCount ?? 10;
-console.log(count)
+// With nullish coalescing (??)
+let userCount = 0;
+let count = userCount ?? 10;
+console.log(count); // Outputs: 0 (because userCount is not null or undefined)
+ The first method gives 10 when userCount is 0 because 0 is falsy. The second method, using ??, will return 0 because it only checks for null or undefined.
 
-<!-- trick 2 -->
-using arrow function
-const add=(a,b)=>a+b;
+**Trick 2: Using Arrow Functions**
+Arrow functions provide a shorter syntax for writing functions.
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // Outputs: 5
+Arrow functions are concise and also inherit the this value from the surrounding context, unlike regular functions.
 
-<!-- find value -->
-let users=[
-    {id: 10, name: "ali", addd: "malir"},
-    {id: 10, name: "hisham", addd: "sadar"},
-    {id: 11, name: "huzaifa", addd: "garden"},
-    {id: 12, name: "nabeel", addd: "model"},
-    {id: 13, name: "bilal", addd: "halt"}
-]
+**Trick 3: Finding a Value in an Array**
+
+let users = [
+    {id: 10, name: "Ali", address: "Malir"},
+    {id: 11, name: "Hisham", address: "Saddar"},
+    {id: 12, name: "Huzaifa", address: "Garden"},
+    {id: 13, name: "Nabeel", address: "Model"},
+    {id: 14, name: "Bilal", address: "Halt"}
+];
+
 let result;
-for(i=0; i<users.length; i++){
-    if(users[i].name==="ali"){
-       result= users[i]
+for (let i = 0; i < users.length; i++) {
+    if (users[i].name === "Ali") {
+        result = users[i];
         break;
     }
 }
-console.log(result)
+console.log(result);
 
 <!-- shortcut to do it -->
-let result=users.find( user=> user.name==='ali')
-console.log(result)
+let result = users.find(user => user.name === 'Ali');
+console.log(result);
