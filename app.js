@@ -217,15 +217,15 @@ let el = ull.getAttribute("name");
 console.log(el);
 
 // **Inline Style**
-let button = document.getElementById("button-id");
-button.style.cssText = "background-color: red; color: white;";
+let buttonn = document.getElementById("button-id");
+buttonm.style.cssText = "background-color: red; color: white;";
 
 // Another way
-let btn = document.getElementById("ui");
-btn.style.color = "red";
+let btnn = document.getElementById("ui");
+btnn.style.color = "red";
 
 // **Get Computed CSS**
-let computedStylee = getComputedStyle(button).color;
+let computedStylee = getComputedStyle(buttonn).color;
 console.log(computedStylee);
 
 // **CSS Classes**
