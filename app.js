@@ -1,7 +1,12 @@
-function Person(fName,lName,a){
-    this.firstName=fName;
-    this.lastName=lName;
-    this.age=a;
-}
-let person1=new Person('ali','brohi',24)
-console.log(person1)
+const url='https://cat-fact.herokuapp.com/facts';
+let pp=document.querySelector('p')
+let btn=document.querySelector('button')
+ async function GetData(){
+    let response=await fetch(url);
+  let data= await response.json();
+
+  btn.addEventListener('click', ()=>{
+    pp.innerText= data[0].text
+  })
+ }
+ GetData();

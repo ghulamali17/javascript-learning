@@ -1,531 +1,410 @@
+**Logical Operators**
+&& (AND): Both conditions must be true.
+console.log(5 > 10 && 6 > 1); // false
 
- ***comparision operators**
+|| (OR): At least one condition must be true.
+console.log(5 == 5 || 6 == 5); // true
 
-<!-- // == dont compare datatype -->
-let a=5;
-let b="5";
-if(a==b)
-    {
-   document.write("Equal")
-}else{
-    document.write(" not Equal")
-}
-<!-- // === compare datatype -->
-let a=5;
-let b="5";
-if(a===b)
-    {
-   document.write("Equal")
-}else{
-    document.write(" not Equal")
-}
-<!-- // != not equal to -->
-let a=5;
-let b=5;
-if(a!=b)
-    {
-   document.write("Equal")
-}else{
-    document.write(" not Equal")
+! (NOT): Reverses the truthiness.
+console.log(!(6 == 5)); // true
+
+**Conditions in JavaScript**
+if, else if, else
+let input = "no";
+if (input === 1 || input === "y" || input === "yes") {
+    console.log("Continue...");
+} else if (input === 0 || input === "n" || input === "no") {
+    console.log("End");
+} else {
+    console.log("Wrong input");
 }
 
+**Ternary Operator**
+Use for concise if-else conditions with single expressions.
+let loginStatus = 1;
+let option = loginStatus === 1 ? "Logout" : "Login";
+console.log(option);
+Nullish Coalescing Operator ??
+Provides a default value for null or undefined.
 
-*** logical operator***
-// 5>10 && 6>1
-// both should be true it will be true then
 
-// || orr
-// 5==5 || 6==5 it will be trues
-// one should be true
+let user = null;
+alert(user ?? "Guest User"); // "Guest User"
 
-// ! not
-// it will reverse the decicions
-// !(6==5) -> true
-
-*** Conditions in javascript**
-<!-- if else -->
-let input;
-input="no";
-
-if(input===1){
-document.write("continue....")
-}
-else if(input==="y"){
-    document.write("continue....")
-}
-else if(input==="yes"){
-    document.write("continue....")
-}
-else if(input===0){
-    document.write("END")
-}
-else if(input==="no"){
-    document.write("END")
-}
-else if(input==="n"){
-    document.write("END")
-}
-else{
-    document.write("Wrong input")
-
-}
-***Ternaery operator *** use only if you have few lines otherwise use if else
-let loginHai=1;
-let option= loginHai==1 ? "logout" : "login";
-document.write(option)
-***Nullish coalescing operator (??)***
-<!-- use to get rid of undiffind and NULL-->
-let user;
-user= "Ali"
-alert(user ?? "Guest user");
-
-**SWITCH STATMENTS**
-it will do ==== comparaions
-input="s";
-switch(input){
-case 1:
- document.write("continue");
-break;
-case 'y':
-document.write("continue");
- break;
-case 'yes':
-document.write("continue");
- break;
-  case 0:
- document.write("end");
-break;
-case 'n':
-   document.write("end");
-break;
-case 'No':
- document.write("end");
-break;
- default:
-document.write("Wrong Input");
-}
-
-***Loop in Javascript ***
-
-<!-- while -->
- let counter=1;
- let sum=0;
- while(counter<=100){
-    if(counter%2==0){
-        sum=sum+counter;
-
-    }
-    counter++;
-
- }
- document.write(sum);
-
- if the statment wrong it will not run
- <!-- do while -->
-  let counter=12;
-
-do{
-  document.write("hello")
-    counter++;
-
- } while(counter<=10);
-
- if the statment wrong at first time it will print it one time 
-
-<!-- for loop -->
-for(let a=1; a<=10; a++){
-    document.write(a)
-}
-first time it will read from a=1 then it check condition and then it will skip a++ and print the document text one time
-then it will go in reverse it will go to a++ it will print one time then check condition if true print more
-<!-- for of -->
-we can use it to get value of string and arrays 
-let str=["alibrohi","ali","alywe","brohi"]
-for( let vhh of str){
-    console.log(vhh)
-}
-<!-- for in -->
-it is use to get key values of object
-let person={
-    name: "ali",
-    age: 20,
-    email: "exam@gmail.com"
-}
-for(let key in person ){
-    console.log(`${key} : ${person[key]}`)
-}
-
-<!-- for each -->
-
-for each is a higher order funntion or method. hof is the function which take other function as parametar
-or return it.
-let arr=[1,2,3,4,5,6]
-arr.forEach((val) =>{
-   document.write(val)
-})
-
-**Break Continue and Nested Lopp**
-<!-- break -->
-for(let a=1; a<=10; a++){
-    if(a==5){
+**Switch Statements**
+let input = "s";
+switch (input) {
+    case 1:
+    case 'y':
+    case 'yes':
+        console.log("Continue");
         break;
-
-    }
-    document.write(a)
-    document.write('<br/>')
-
+    case 0:
+    case 'n':
+    case 'no':
+        console.log("End");
+        break;
+    default:
+        console.log("Wrong Input");
 }
-<!-- continue -->
-for(let a=1; a<=10; a++){
-    if(a==5){
-        continue;
+**Loops in JavaScript**
+**while Loop**
 
-    }
-    document.write(a)
-    document.write('<br/>')
-
+let counter = 1;
+let sum = 0;
+while (counter <= 100) {
+    if (counter % 2 === 0) sum += counter;
+    counter++;
 }
-<!-- nested loop -->
-for(let a=1; a<=10; a++){
-   
-    document.write(a)
-    document.write('<br/>')
-    for(let b=1; b<3; b++){
-   
-        document.write("ali")
-        document.write('<br/>')
-    
-    }
+console.log(sum);
+
+**do-while Loop**
+let counter = 12;
+do {
+    console.log("Hello");
+    counter++;
+} while (counter <= 10);
+
+**for Loop**
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
 }
-
-
-**alert, prompt,confirm**
-<!-- use to intract with user -->
-
-<!-- alert and prompt -->
-let age= prompt('Enter you age');
-if(age !=null){
-    alert(`Your age is ${age}`);
+for...of Loop (for Arrays)
+let names = ["Ali", "Brohi"];
+for (let name of names) {
+    console.log(name);
 }
-else{
-    alert("Age should be fill");
-}
-<!-- confirm -->
-let response= confirm("are you share u want to delete?");
-if(response){
-    alert("Your File deleted");
-
-}else{
-    alert("Your File Not deleted");
-}
-
-<!-- Type Conversion -->
-mostly JS automaticaly converts type by it self
-for example if write Num="5"-2;
-it will return 3 automaticaly
-but if we write "5"* "Yes" but will
-give Nan because "yes" cannot converted 
-in Number.
-String()
-number()
-bolean()
-
-let type=5;
-console.log(typeof type);
-let newType=String(type)
-console.log(typeof newType);
-
-**String Manipulation**
- <!-- first method -->
-let str="ali";
-new=`hi ${str}`;
-console.log(new);
-
-<!-- escape -->
-\
-if we want a \ in our string we will use \\ the first will be use as escape and 2nd will be use as \.
-if we want " in string
-new="ali \" brohi"
-<!-- to get length -->
-console.log(new.length);
-<!-- to fecth any char -->
-console.log(new[3]);
-<!-- to concanate 2 strings -->
-console.log(new + " " + old);
-
-<!-- compare two strings -->
-let str="ali";
-let str2="ali";
-if("ali"==str2){
-    alert("The name is same")
-
-}else{
-    alert("Not Same")
-}
-
-<!-- Concate -->
-let str="ali";
-let str2="ali";
- let neww= str.concat(" ",str2)
- alert(neww)
-
- <!-- to extract a sub string from a string -->
- let str="Hi my name is ali. i am student of SMIU university. ";
-let newStr= str.substr(3,14);
-document.write(newStr)
-<!-- // first will tell position second lenght
-// output  my name is ali -->
-
-<!-- to check the starting position of any string (indexOf) -->
-
-let str="Hi my name is ali. i am student of SMIU university. ";
-let newStr= str.indexOf("SMIU")
-document.write(newStr)
-
-<!-- to remove the white space -->(trim(), trimStart(), trimEnd())
-et str="Hi my name is ali. i am student of SMIU university. ";
-let newStr= str.trim();
-document.write(newStr)
-<!-- to convert to upercase/lowerCase -->
-let str="Hi my name is ali. i am student of SMIU university. ";
-let newStr= str.toUpperCase();
-document.write(newStr)
-
-<!-- to replace a string -->
-let str="Hi my name is ali. i am student of SMIU university. ";
-let newStr= str.replace("SMIU", "SMI");
-document.write(newStr)
-
-<!-- if we want to find any string is include in string or not in true and false form  -->
-let str="Hi my name is ali. i am student of SMIU university. ";
-let newStr= str.includes("brohi")
-document.write(newStr)
-
-
-**ARRAYS In JAVASCRIPT**
-<!-- to update and create an array in js -->
-let books=["book1","book2","book1","book3","book4","book5"];
-books[1]="new book"
-document.write(books);
-<!-- Operations on Array -->
-<!-- to check lenght -->
-let books=["book1","book2","book1","book3","book4","book5"];
-document.write(books.length);
-<!-- if we want to add something at end of array-->
-let books=["book1","book2","book1","book3","book4","book5"];
-books.push("book6")
-document.write(books);
-<!-- if we want to add  start of array-->
-let books=["book1 ","book2 ","book1 ","book3 ","book4 ","book5 "];
-books.unshift("book")
-document.write(books);
-<!-- to delete last item -->
-books.pop();
-<!-- to  delete first element -->
-books.shift();
-<!-- to delete a item from middle -->
-let books=["book1 ","book2 ","book1 ","book3 ","book4 ","book5 "];
-books.splice(1,4);
-document.write(books);
-<!-- to empty array -->
-books=[];
-books.length=0;
-<!-- to check position -->
-let books=["book1","book2","book1","book3","book4","book5"];
-let pss =books.indexOf("book5")
-console.log(pss)
-<!-- to check if it is array or not -->
-let books=["book1","book2","book1","book3","book4","book5"];
-let book='book1';
-console.log(Array.isArray(book))
-
-<!-- To convert a whole array in a sentence form -->
-let books=["book1","book2","book1","book3","book4","book5"];
-let newArr=books.join(' ');
-console.log(newArr)
-<!-- to add differnt arrays -->
-we will use
-let newArr=books.concate(book)
-<!-- <!-- if we craete a array in array then it will be called as multi dimensional array -> -->
-let bookPages=[["book1","300"],["book2","400"],["book3","500"],["book4","200"],];
-let newArr=bookPages[1][0];
-document.write(newArr)
-<!-- to check index of all array elements using forloop -->
-let books=["book1","book2","book1","book3","book4","book5"];
-let len=books.length;
-for(i=0; i<len; i++){
-console.log(`Element is ${i} is ${books[i]} \n`)
+**for...in Loop (for Objects)**
+let person = {
+    name: "Ali",
+    age: 20,
+    email: "example@gmail.com"
+};
+for (let key in person) {
+    console.log(`${key}: ${person[key]}`);
 }
 
 **Functions**
-<!-- two types user defined  and pre difined -->
-<!-- pre difined -->
-alert();
-<!-- user difined -->
-function mulTable(){
-    for(i=1; i<=10;i++){
-        document.write(`2 X ${i} =${2*i}`)
-        document.write("<br/>")
+User-Defined Function
+function multiplyTable(num) {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${num} x ${i} = ${num * i}`);
     }
 }
-mulTable();
-<!-- **Parameter and Arguments -->
-
-function mulTable(num){
-    for(i=1; i<=10;i++){
-        document.write(` ${num} X ${i} =${num*i}`)
-        document.write("<br/>")
-    }
-}
-mulTable(4);
-<!-- here the num is argument and value 4 is parameter -->
-like in alert("hello"); the hello is argument passed
-<!-- The argument object -->
-function add(){
-    document.write(arguments[1])
-}
-add(5,7,8)
-<!-- Return in Function -->
-<!-- if it find multiple return it will only execute first return -->
-function add(a,b){
-    let d=a+b;
-    return d;
-}
-let c= add(5,7,8)
-document.write(c);
-
-<!-- Globle vs Local Variable In JS -->
-
-<!-- The variable that is defind inside the function(we can only use it inside fun) 
-is called local variable and the one outside function (we can use it anywhere)is called global variables -->
-we can create any other variable with same name anywhere if it is inside funtion because of local variable behavior
-
-<!-- Anonymous function -->
-any function that do not have any name
-we use it if we want to use it one time
-like we can use it in setTimeout(function,3000)
-so the computer do not waste memory
-
-<!-- Immediately Invoked Function -->
-the function we create then we execute it,
-we use it so we do not create a global space variable as it
-will occupy space but if we use it in local variable 
-it will not occupy space in memory.
-
-(function (){
-    console.log("Hello world");
-    alert("Hello world")
+multiplyTable(4);
+Immediately Invoked Function Expression (IIFE)
+javascript
+Copy code
+(function () {
+    console.log("Hello World");
 })();
-we use it any third party JS like any other  .js file from internet it may happen
-that they have same global variable as ours so to overcome the conflict we can use
-the Immediately Invoked Function.
 
-**Objects In JS**
-Objects in JavaScript are used to group related data and functions together in a single unit. Think of an object as a real-life item, like a car. A car has properties (color, make, model) and behaviors (drive, stop, honk). In JavaScript, you can create an object to represent this car, with its properties and functions bundled together.
-
-Here’s why we use objects:
-
-1. **Organization**: Objects help organize code by keeping related data and functions together. Instead of having separate variables and functions scattered around, you can group them in an object.
-
-2. **Reusability**: Once you create an object, you can easily reuse it without having to rewrite the code. For example, if you have a car object, you can create multiple cars with different properties.
-
-3. **Easier to manage**: Working with objects makes it easier to handle complex data and operations, especially as your code grows. Instead of managing many variables, you work with a few objects that contain everything you need.
-
-4. **Encapsulation**: Objects allow you to hide the details of how things work and only expose what’s necessary. This makes your code cleaner and easier to use. For example, you don't need to know how the car's engine works to drive it—you just need the functions to start and stop the car.
-
-In short, objects make your code more structured, easier to manage, and more powerful.
-
-var person={
-    name="ali",
-    age=20,
-    email="example@gmail.com"
-    address="example street"
-}
-console.log(person.name)
-
-<!-- object with method -->
-let person1={
-    fName: "ali",
-    lName: 'brohi',
-    age: 24,
-
-    fullName: function(){
-        console.log(this.fName+ " " + this.lName);
-    }
-}
-console.log(person1.fullName());
-<!-- we can add value to it after any time -->
-let person1={
-   
-}
-person1.name='ali'
-person1.sayHii=function(){
-    alert('Hi')
-}
-person1.sayHii();
-**New Keyword in JS**
-var person= new Object();
-person.name="ali";
-person.age=23;
-console.log(person.name)b
-
-**Property getters and setters**
-
-watch video about it dont understand it properly yet
-
-**Object Constructer**
-function Students(first,last,age,cls){
-    this.firstName=first;
-    this.lastName=last;
-    this.age=age;
-    this.class=cls;
-}
-<!-- to add something to constructer -->
-Students.prototype.nationality="pakistani";
-var students1=new Students("ali", "brohi", 23, 10);
-students1.nationality="Pakistani";
-<!-- to add something extra -->
-console.log("students1")
-**Object ProtoTypes**
-
-**Nested Object**
-var user={
-id:101,
-email:"example@gmail.com",
-personalInf:{
-    name: "abc",
-    address:{
-        street: "example",
-        city: "Pakistan"
-    }
-}
+**JavaScript Objects**
+Object Basics
+let person = {
+    name: "Ali",
+    age: 20,
+    email: "example@gmail.com"
 };
-console.log(user.personalInf)
+console.log(person.name);
+Adding Methods to Objects
+let person1 = {
+    fName: "Ali",
+    lName: "Brohi",
+    fullName() {
+        return `${this.fName} ${this.lName}`;
+    }
+};
+console.log(person1.fullName());
 
-it will be used when we will learn jason format
+**Arrays in JavaScript**
+Array Methods
+let books = ["book1", "book2", "book3"];
+
+// Add elements
+books.push("book4"); // Adds to end
+books.unshift("book0"); // Adds to start
+
+// Remove elements
+books.pop(); // Removes from end
+books.shift(); // Removes from start
+
+// Check length
+console.log(books.length);
+
+// Concatenate arrays
+let moreBooks = ["book5", "book6"];
+let allBooks = books.concat(moreBooks);
+console.log(allBooks);
+String Manipulation
+Basic Methods
+javascript
+Copy code
+let str = "Hi, my name is Ali.";
+
+// Length
+console.log(str.length);
+
+// Access Character
+console.log(str[3]);
+
+// Concatenation
+console.log(str + " Nice to meet you!");
+
+// Uppercase & Lowercase
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+// Replace
+console.log(str.replace("Ali", "Ahmed"));
+Type Conversion
+JavaScript can automatically convert types, but we can also convert explicitly.
+
+let numStr = "5";
+console.log(Number(numStr)); // Converts to number
+console.log(Boolean(numStr)); // Converts to boolean
+console.log(String(5)); // Converts to string
 
 **Hoisting**
-the js first read the all code and if there is any function  it will put it first and then execute it
-like
-hello();
-function hello(){
-    console.log("Hello");
+JavaScript "hoists" function declarations and variables, allowing functions to be called before their declaration.
+
+greet();
+function greet() {
+    console.log("Hello!");
 }
+**Alerts, Prompts, and Confirms**
+Prompt for User Input
+javascript
+Copy code
+let age = prompt("Enter your age");
+if (age !== null) {
+    alert(`Your age is ${age}`);
+} else {
+    alert("Age input required");
+}
+
+**Confirm**
+let response = confirm("Are you sure you want to delete?");
+if (response) {
+    alert("Your file was deleted.");
+} else {
+    alert("Your file was not deleted.");
+}
+
+**Type Conversion**
+JavaScript automatically converts types, but we can also convert explicitly.
+let num = "5" - 2; // Returns 3 because "5" is converted to number
+let invalid = "5" * "Yes"; // Returns NaN because "Yes" can't convert to a number
+
+// Type conversion functions
+String(); // Converts to string
+Number(); // Converts to number
+Boolean(); // Converts to boolean
+
+// Example:
+let type = 5;
+console.log(typeof type); // 'number'
+let newType = String(type);
+console.log(typeof newType); // 'string'
+
+**String Manipulation**
+Template Strings
+let str = "Ali";
+let greeting = `Hi ${str}`;
+console.log(greeting);
+
+**Escaping Characters**
+Use \ for escaping.
+let newStr = "Ali \"Brohi\"";
+console.log(newStr); // Ali "Brohi"
+
+**String Length and Accessing Characters**
+console.log(newStr.length);
+console.log(newStr[3]);
+
+**Concatenation and Comparison**
+console.log(newStr + " " + oldStr);
+let str1 = "Ali";
+let str2 = "Ali";
+if (str1 == str2) {
+    alert("The names are the same");
+} else {
+    alert("Not the same");
+}
+
+**Concatenation using concat()**
+let newStr = str1.concat(" ", str2);
+alert(newStr);
+
+**Extracting Substrings**
+let str = "Hi, my name is Ali.";
+let subStr = str.substr(3, 14);
+console.log(subStr); // "my name is Ali"
+
+**Finding String Index**
+let str = "Hi, my name is Ali.";
+console.log(str.indexOf("Ali"));
+
+**Trimming Whitespace**
+let str = "   Hello World!   ";
+console.log(str.trim());
+console.log(str.trimStart());
+console.log(str.trimEnd());
+
+**Case Conversion**
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+
+**Replacing Substrings**
+let str = "Hi, my name is Ali.";
+let newStr = str.replace("Ali", "Ahmed");
+console.log(newStr);
+
+**Checking Inclusion with includes()**
+console.log(str.includes("Brohi")); // Returns false
+
+**Arrays in JavaScript**
+Array Basics
+let books = ["Book1", "Book2", "Book3"];
+books[1] = "New Book";
+console.log(books);
+
+**Array Length and Adding/Removing Elements**
+console.log(books.length);
+books.push("Book4");
+books.unshift("Start Book");
+books.pop();
+books.shift();
+
+**Deleting Middle Elements**
+books.splice(1, 2);
+
+**Clearing an Array**
+books = [];
+books.length = 0;
+
+**Finding Array Position**
+console.log(books.indexOf("Book5"));
+
+**Checking if it's an Array**
+console.log(Array.isArray(books));
+
+**Joining Array Elements**
+let sentence = books.join(' ');
+console.log(sentence);
+
+**Concatenating Arrays**
+let moreBooks = ["Book5", "Book6"];
+let allBooks = books.concat(moreBooks);
+console.log(allBooks);
+
+**Multidimensional Arrays**
+let bookPages = [["Book1", 300], ["Book2", 400]];
+console.log(bookPages[1][0]); // "Book2"
+
+**Iterating through Arrays**
+for (let i = 0; i < books.length; i++) {
+    console.log(`Element ${i} is ${books[i]}`);
+}
+
+**Functions in JavaScript**
+User-Defined Functions
+function multiplyTable(num) {
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${num} x ${i} = ${num * i}`);
+    }
+}
+multiplyTable(4);
+
+**Arguments Object**
+function add() {
+    console.log(arguments[1]);
+}
+add(5, 7, 8);
+
+**Return in Functions**
+function add(a, b) {
+    return a + b;
+}
+let result = add(5, 7);
+console.log(result);
+**Global vs. Local Variables**
+Variables defined inside a function are local, while those outside are global.
+
+Anonymous and Immediately Invoked Function Expressions (IIFE)
+(function () {
+    console.log("Hello World");
+})();
+
+**Objects in JavaScript**
+Basic Object Syntax
+let person = {
+    name: "Ali",
+    age: 20,
+    email: "example@gmail.com"
+};
+console.log(person.name);
+
+**Adding Methods**
+let person = {
+    firstName: "Ali",
+    lastName: "Brohi",
+    fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+};
+console.log(person.fullName());
+
+**Object Constructors**
+function Student(first, last, age, grade) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.grade = grade;
+}
+
+Student.prototype.nationality = "Pakistani";
+let student1 = new Student("Ali", "Brohi", 23, "10th Grade");
+console.log(student1);
+
+**Nested Objects**
+let user = {
+    id: 101,
+    email: "example@gmail.com",
+    personalInfo: {
+        name: "Ali",
+        address: {
+            street: "Example St",
+            city: "Karachi"
+        }
+    }
+};
+console.log(user.personalInfo.address.street);
+
+yahan
+**Hoisting**
+Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. This means you can use functions and variables before declaring them.
+hello();
+function hello() {
+  console.log("Hello");
+}
+
 
 **Document Object Model (DOM)**
-it is type of API that help us to manipualte HTML. Through JS how we can bring changes into HTMl is done by DOM.
+The DOM is an API that allows JavaScript to interact with HTML elements on a webpage.
 
-<!-- To change by class -->
-let tm=document.getElementsByClassName("cl");
-for(let i=0; i<=tm.length; i++){
-    tm[i].innerHTML="<P>hello</p>";
+// By class
+let elements = document.getElementsByClassName("class-name");
+for (let i = 0; i < elements.length; i++) {
+  elements[i].innerHTML = "<p>Hello</p>";
 }
-<!-- to change by id -->
-    let elm=  document.getElementById("first")
-      console.log(elm)
-      elm.innerHTML="<p>Hello</p>"
 
-<!-- **selectt element by tag name** -->
+// By ID
+let element = document.getElementById("element-id");
+element.innerHTML = "<p>Hello</p>";
+
+
+**selectt element by tag name**
  let tm=document.getElementsByTagName("p");
        for(i=0; i<tm.length; i++){
         tm[i].innerHTML=" hai bhai thek ho "
@@ -535,21 +414,20 @@ for(let i=0; i<=tm.length; i++){
         ts[i].innerHTML="Hai Kaisy ho"
        }
 
-<!-- to change elements in specific container/div -->
+**to change elements in specific container/div**
  let div1=document.getElementById("div1")
       let tm=div1.getElementsByTagName("h2")
       for(i=0; i<=tm.length; i++){
-        tm[i].innerHTML="hai bhai"
-
+        tm[i].innerHTML="han bhai"
       }
 
 **Querry Selector**
  let em = document.querySelectorAll("p.intro");
-
 for (let i = 0; i < em.length; i++) {
-    em[i].innerHTML = "hahaha";
+    em[i].innerHTML = "updated text";
 }
 <!-- it will change all the p which have intro class -->
+
 **Traversing Elements**
 how we go to from one element to another is done by it we can go to like parent element by using it.
 <!-- to select parent of element -->
@@ -568,18 +446,26 @@ how we go to from one element to another is done by it we can go to like parent 
   let em = document.getElementById("intro");
  let prt=em.previousElementSibling;
  console.log(prt)
+ **Traversing Elements Theory**
+Navigate through elements in the DOM using:
+parentElement: Gets the parent of an element.
+firstElementChild: Gets the first child.
+children: Gets all children.
+previousElementSibling: Gets the previous sibling.
 
  **Create and Append Element**
-let newBtn=document.createElement("button");
-newBtn.innerText="click me"
-let div=document.querySelector('div')
-div.append(newBtn)
+let newButton = document.createElement("button");
+newButton.innerText = "Click Me";
+document.querySelector('div').append(newButton);
+
 
 <!-- it will ad at last -->
 div.prepend(newBtn)
 <!-- it will add at start -->
- **insert before**
- watch video about it dont understand it properly yet
+**Insert Adjacent HTML**
+The insertAdjacentHTML method allows inserting HTML at specific positions relative to an element.
+// Positions: "beforebegin", "afterbegin", "beforeend", "afterend"
+myDiv.insertAdjacentHTML('beforeend', '<p>Inserted at the end inside the div.</p>');
 
  **Remove Child Element**
 
@@ -591,7 +477,8 @@ div.prepend(newBtn)
 let prt=document.getElementById("ui");
 let elm=prt.firstElementChild;
 prt.removeChild(elm)
-   <!-- remove nxt sibling -->
+
+   <!-- remove next sibling -->
    let prt=document.getElementById("ui");
 let elm=prt.firstElementChild.nextElementSibling;
 prt.removeChild(elm)
@@ -599,89 +486,69 @@ prt.removeChild(elm)
 let prt=document.getElementById("ui");
 document.body.removeChild(prt)
 
-**Clone Element**
-let menu=document.getElementById("ui");
-**Replace Elements**
- watch video about it dont understand it properly yet
- **Insert adjacent HTML**
- insertAdjacentHTML: A JavaScript method used to insert HTML content into the DOM relative to an existing element. You can insert the content in four positions:
 
-"beforebegin": Before the element itself.
-"afterbegin": Inside the element, before its first child.
-"beforeend": Inside the element, after its last child.
-"afterend": After the element itself.
-This method is efficient for adding new HTML without affecting the entire content of the element.
-<!-- myDiv.insertAdjacentHTML('beforeend', '<p>Inserted at the end inside the div.</p>'); -->
 
 **Change  Attribute**
 it is use to change attribute like class id name
- let ull=document.getElementById("ui");
-ull.setAttribute("class", "uiui")   
+let element = document.getElementById("element-id");
+element.setAttribute("class", "new-class");
 
 <!-- to check already attribute -->
 <button id="ui" name="uisi">Form 1</button> 
 let ull=document.getElementById("ui");
 let el=ull.getAttribute("name");
 document.write(el);
-<!-- to remove a attribute -->
-<button id="ui" name="uisi">Form 1</button> 
-let ull=document.getElementById("ui");
-let el=ull.removeAttribute("name");
-document.write(el);
-<!-- to check attribute available or not -->
-let el=ull.hasAttribute("name");
+
 
 
 **Inline Style**
-<button id="ui" name="uisi">Form 1</button>
-let btn=document.getElementById("ui");
-btn.style.cssText="background-color: red;"
-<!-- another way to add inline style -->
-    <button id="ui" name="uisi">Form 1</button>
- 
-
-     <script>
-  
-let btn=document.getElementById("ui");
-btn.setAttribute('style','background-color: black; color: white; padding: 20px 30px; font-size:2rem; border-radius: 36px;');
+Inline styling using JavaScript:
+let button = document.getElementById("button-id");
+button.style.cssText = "background-color: red; color: white;";
 
 <!-- another way -->
 let btn=document.getElementById("ui");
 btn.style.color="red"
 
 **Get Computed CSS**
-to check already applied css to attribute
-lett css=getComputedStyle(btn.color);
+Retrieve already applied CSS styles:
+let computedStyle = getComputedStyle(button).color;
 
 **Css Classes**
-<!-- to check classname -->
+let element = document.getElementById("element-id");
+element.classList.add("new-class"); // Add class
+element.classList.remove("old-class"); // Remove class
+element.classList.replace("old-class", "new-class"); // Replace class
+
+**to check classname**
     <div id="box" class="color dim">
         <p>This is a dummy text</p>
     </div>
-  
 let em=document.getElementById("box")
-console.log (em.className);
-<!-- to add new class -->
+console.log(em.className);
+
+ **to add new class**
     <div id="box" class="color">
         <p>This is a dummy text</p>
     </div>
 let em=document.getElementById("box")
 em.className +=" dim"
-<!-- one more way to check classes -->
+
+ **one more way to check classes**
   <div id="box" class="color dim">
         <p>This is a dummy text</p>
     </div>
 let em=document.getElementById("box")
-// console.log(em.classList)
-for(let css of em.classList){
-    console.log(css)}
-    <!-- now to add some class using classlist -->
+ console.log(em.classList)
+
+**now to add some class using classlis**
      <div id="box" class="color dim">
         <p>This is a dummy text</p>
     </div>
 let em=document.getElementById("box")
 em.classList.add("uiui");
 26:28
+
 <!-- to remove some class -->
 em.classList.remove("uiui");
 <!-- to replace some class -->
@@ -689,9 +556,14 @@ em.classList.replace("color", "bg");
 <!-- to check class is there or not -->
 em.classList.contains("color");
 <!-- it will check if class is not there it will add it and if there is class it will remove it -->
-em.classList.contains("hqhq");
+em.classList.contains("color");
 
-**width height of an element**
+**Width and Height of Elements**
+let widthWithBorder = element.offsetWidth;
+let heightWithBorder = element.offsetHeight;
+let widthWithoutBorder = element.clientWidth;
+let heightWithoutBorder = element.clientHeight;
+
 <!-- to check with border -->
  <div id="box" class="color dim">
         <p>This is a dummy text</p>
@@ -717,8 +589,9 @@ and when our web page does like load
  <button id="bten" onclick="btnClicked()">Hello</button>
     
 function btnClicked(){
-    alert("Yoo btn Cliked")
+    alert("Yoo btn Clicked")
 }
+
 <!-- using event listner -->
    <button id="btn">Hello</button>
 function btnClicked(){
@@ -734,7 +607,7 @@ function btnClicked(){
 }
 let btn=document.getElementById("btn");
 btn.addEventListener('click',function(){
-    alert("Yoo you btn Cliked");
+    alert("Yoo btn Clicked");
 });
 <!-- mouse over -->
    <button id="btn">Hello</button>
@@ -742,40 +615,36 @@ btn.addEventListener('click',function(){
 
 let btn=document.getElementById("btn");
 btn.addEventListener('mouseover',function(){
-    alert("Yoo you mouse is over");
+    alert("Yoo mouse is over");
 });
 </script>
-<!-- some goes for mouse out -->
-
+<!-- same goes for mouse out -->
 
 **REMOVE EVENTLISTNER**
+To remove an event listener:
 btn.removeEventListner("click",btnClicked)
+
 **PAGE LOAD EVENT**
 we use it when something is loaded like if a image is fully loaded we can add some action 
 you can use it on a particuler element or window 
 <!-- for window -->
-window.addEventListner('DOMContentLoaded', function()){
-    alert("The window is loaded fully")
-};
+wiwindow.addEventListener('DOMContentLoaded', () => alert("Window fully loaded"));
+
 <!-- to load particuler element -->
 let em=getElementById("image1");
 em.addEventListner("load", function()){
       alert("The Image is loaded now")
 };
 <!-- You can also use it inline  -->
-like onload="("load", function()){
-      alert("The Image is loaded now")
-};"
+like onload="("load", function()){alert("The Image is loaded now")};"
 
 **Mouse Events**
-<!-- on click inline -->
-   <div id="box" onclick="fun();"></div>
-     <script>
-function fun(){
-    alert("click")
-};
-</script>
-
+Various mouse events like onclick, ondblclick, onmousedown, and onmouseup allow interactions based on mouse actions.
+**Key Down Event**
+Detect which key is pressed:
+window.addEventListener("keydown", event => console.log(event.key));
+**Scroll Events**
+window.addEventListener('scroll', () => console.log("Scrolling"));
 <!-- to activate event on right mouse click -->
 we use oncontextmenu
 <!-- on doule click -->
@@ -789,24 +658,7 @@ work like hover
 <!-- on mouse out -->
 when you take curser out from element
 
-**Key Down Element**
-<!-- to check which key is pressed -->
-   <div id="box"></div>
-        window.addEventListener("keydown", fun)
-function fun(ev)
-   <!-- we can use it a condition like if some key is clicked do this or that -->
 
-**Scroll Events**
-   <script>
-window.addEventListener('scroll', function(){
-    console.log("scrolling")
-})
-</script>
-1.12.49
-<!-- to check whether scroll up or down -->
-<script>
-       
-        </script>
 <!-- to check scroll on particuler pixel --> 
          <script>
         window.addEventListener('scroll', function(){
@@ -818,23 +670,15 @@ window.addEventListener('scroll', function(){
         </script>
 
 **Input Events**
-to check how to detect if user click on element
-    <form action="" >
-        <input type="text" id="tt">
-    </form>
+To detect focus and blur events on an input:
+let input = document.getElementById("input-id");
+input.addEventListener('focus', () => input.style.background = "yellow");
+input.addEventListener('blur', () => input.style.background = "white");
+**Event Bubbling & Capturing**
+Bubbling: Events propagate from the specific element to the least specific.
+Capturing: Events propagate from the least specific to the most specific element.
+btn.addEventListener('click', event => event.stopPropagation()); // Stops bubbling
 
-    <!-- js -->
-    <script>
-let em=document.getElementById("tt");
-em.addEventListener('focus', fun1);
-em.addEventListener('blur', fun2);
-function fun1(){
-    em.style.background="yellow"
-}
-function fun2(){
-    em.style.background="white"
-}
-        </script>
 <!-- to get value of any input -->
 <form action="" >
         <input type="text" id="tt">
@@ -852,164 +696,136 @@ em.addEventListener('input', function(){
  console.log(this.value )
 });
 
-**Event Bubbling & Event Capturing**
+**Prevent Default**
+To override default behavior, such as following a link:
+document.getElementById("link").addEventListener('click', event => {
+  event.preventDefault();
+});
 
-<!-- event bubbling -->
-in thisthe event starts at the most specific element and then goes upward to the least specific element.
-    <div id="myDiv">
-        <button id="btn"></button>
-    </div>
+**Browser Object Model (BOM)**
+Use BOM to interact with the browser window:
+// Popup
+let btn = document.getElementById("btn");
+btn.addEventListener('click', () => window.open("https://www.example.com", "new-window", "width=500, height=500"));
 
-    <!-- js -->
-    <script>
-       
-let d = document.getElementById("myDiv");
-let b = document.getElementById("btn");
-
-b.addEventListener('click', btnClicked);
-d.addEventListener('click', divClicked);
-document.body.addEventListener('click', bodyClicked);
-function btnClicked(){
-    console.log("button clicked....");
-}
-
-function divClicked(){
-    console.log("div clicked....");
-}
-
-function bodyClicked(){
-    console.log("body clicked....");
-}
-<!-- event capturing -->
-it is inverse of bubbling so in the first least specific then most specific.
-addEventListner(event, function,false)
-<!-- to select only selected element -->
-function btnClicked(event){
-    console.log("button clicked....");
-    event.stopPropagation();
-}
-
-**Prevent Default** 
-it is use to change default behaiour of DOM
-
-<a href="https://www.google.com" id="anchr">Click Me</a>
-
-    <script>
-let anc=document.getElementById("anchr");
-anc.addEventListener('click', function(e){
-    console.log("clicked");
-    e.preventDefault();
-})
-
-        </script>
-
-**Browser Object Model(BOM)**
-use to interact with browser
-<!-- window -->
-every function is the method of window object
 <!-- to check height  -->
 console.log(window.innerHeight);
 console.log(window.outerHeight);
-<!-- to open a POPUP -->
- <button id="btn">Google</button>
-    <script>
-       
-let btn=document.getElementById("btn");
-let url="https://www.google.com"
-let features="height:=500, width=500"
-btn.addEventListener('click', function(){
-    window.open(url,'google',features);
-});
 
-        </script>
-**Time out and Time Interval**
-let sst=setTimeout(myFun,5000)
-function myFun(){
-    alert("Heloooooooooooooooooo")
+**setTimeout and setInterval**
+setTimeout() executes a function after a delay:
+javascript
+Copy code
+let sst = setTimeout(myFun, 5000);
+function myFun() {
+    alert("Hello!");
 }
+To cancel it: clearTimeout(sst);
+Useful for delayed actions like showing a login message.
 <!-- to stop it -->
-clearTimeOut(sst);
-to can use it to sh999ow msg if user is login or not
+
 **Location object**
-console.log(location.href)
-console.log(location.pathname)
-console.log(location.protocol)
+Provides details about the URL of the current page.
+console.log(location.href);        // Full URL
+console.log(location.pathname);    // Path after the domain
+console.log(location.protocol);    // Protocol (http/https)
 
 **Navigator object**
-it can give you all the information about the browser
+Contains info about the browser (e.g., browser version, OS, online status).
 **Screen Object**
+Gives details about the screen’s dimensions.
 console.log(screen.width)
 console.log(screen.height)
 
 
-**Default Value**
-let userTheme = 1;
-let theme = userTheme ?? "dark mode";
-console.log(theme); // Output: "dark mode"
+**Nullish Coalescing (??)**
+?? assigns a default value if the left side is null or undefined:
+let userTheme = null;
+let theme = userTheme ?? "dark mode"; // "dark mode" if userTheme is null
 
 **Array Search**
 let contacts = [
-   {id: 1, name: "Ali", address: "Malir"},
-   {id: 2, name: "Hisham", address: "Saddar"},
-   {id: 3, name: "Nabeel", address: "Model Town"}
+    {id: 1, name: "Ali", address: "Malir"},
+    {id: 2, name: "Hisham", address: "Saddar"},
+    {id: 3, name: "Nabeel", address: "Model Town"}
 ];
-let newArr=contacts.find(contact => contact.name==='Nabeel')
-console.log(newArr)
+let result = contacts.find(contact => contact.name === 'Nabeel');
+console.log(result);
 
-
-**Advance  JavaScript**
+ **ES6 and JavaScript Advancements**
 EcmaScript is a standard which js adapt. it is version of js 1997 first. es6 was released in june 2015.
-es6 was a major change. like arrow function.
-<!-- let and const -->
-the var become the property of window object where is let do not become
+es6 was a major change. like Arrow Functions, let and const, and modules were introduced with ES6.
 ***Array Destructuring***
-let array=['ali,20,karachi']
-let[name,age,city]=array;
-console.log(name)
-if add something extra and there is less values in array then it will give undefined and if write we create empty item in array then we can give it defalut value like
-let array=['ali,20,'','karachi']
-let[name,age,college='smiu',city]=array;
+let array = ['Ali', 20, 'Karachi'];
+let [name, age, city] = array;
+console.log(name); // "Ali"
+
+
 ***object Destructuring***
-let book={
-    name: 'advance js',
-    author: 'ali',
-    // readers: 10000,
-    origin: "Pakistan"
-}
-let{name:title,author=20000,readers,origin}=book;
-console.log(author)
+let book = { name: 'Advanced JS', author: 'Ali', origin: 'Pakistan' };
+let { name: title, author, readers = 20000, origin } = book;
+console.log(author); // "Ali"
+
 **Modules**
-we have to add this in html file then we can use it with import and export in d/f files.
+Enable organizing code across multiple files:
+// In HTML
 <script type="module" src="app.js"></script>
-import {name} from './modules/user.js'
-import {code} from './modules/user.js'
-code();
+
+// In app.js
+import { name } from './modules/user.js';
+import * as usr from './modules/user.js';
+usr.code();
+
 <!-- we can import whole file like this but it will only work with those who have export keyword -->
 import * as usr from './modules/user.js'
 usr.code();
 
-***OPPS In JS**
-<!-- Inheritance -->
-Inheritance in OOP is when a new class (child) takes on the properties and behaviors of an existing class (parent). This allows for code reuse and easier management of similar objects.
 
-<!-- Four Piller of OPPS -->
-The four pillars of OOP (Object-Oriented Programming) are:
-
-1. **Encapsulation**: This means wrapping up all the details about something (like a toy or a game) inside a box/unit, so you can use it without knowing how it works inside.
-
-2. **Abstraction**: This is like using a TV remote. You press buttons to change channels without needing to understand the complex circuits inside the TV.
-
-3. **Inheritance**: Imagine a baby animal that inherits features from its parents, like fur color or the way it runs. In coding, new progr/ams can inherit features from old ones.
-
-4. **Polymorphism**: This is like how one word can have different meanings depending on where you use it. In coding, one action can do different things based on the situation.
-
-
-<!-- before es6 -->
-<!-- we were using construtor function as class -->
-function Person(fName,lName,a){
-    this.firstName=fName;
-    this.lastName=lName;
-    this.age=a;
+**OOP in JavaScript**
+Inheritance in ES6 uses class and extends
+class Employee {
+    constructor() {
+        console.log('Employee is created');
+    }
 }
-let person1=new Person('ali','brohi',24)
-console.log(person1)
+class Manager extends Employee {}
+let manager1 = new Manager(); // "Employee is created"
+
+**Pillars of OOP**
+Encapsulation: Grouping properties and methods.
+Abstraction: Hiding complexity.
+Inheritance: Sharing functionality with child classes.
+Polymorphism: Method overriding and overloading
+
+
+**Async JavaScript**
+Callback: Function passed as an argument.
+function fetchData(callback) {
+    setTimeout(() => {
+        console.log("Data fetched");
+        callback();
+    }, 2000);
+}
+
+fetchData(() => {
+    console.log("Process data");
+});
+
+Callback Hell: Nested callbacks, making code hard to read.
+doSomething(() => {
+    doSomethingElse(() => {
+        doAnotherThing(() => {
+            doFinalThing();
+        });
+    });
+});
+
+Promises: Resolve callback hell with states: pending, resolved, rejected.
+**Async/Await**
+async function combine() {
+    await hello();
+    await greet();
+    await ask();
+}
+combine();
+
